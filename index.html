@@ -11,20 +11,12 @@
   <meta property="og:description" content="יום שני | 18/05 | בית הכנסת לב חריש" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://castroeid.github.io/harel/" />
-  <meta property="og:image" content="https://castroeid.github.io/harel/assets/preview.png" />
-  <meta property="og:image:secure_url" content="https://castroeid.github.io/harel/assets/preview.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://castroeid.github.io/harel/assets/preview.webp" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="עלייה לתורה להראל שקד" />
-  <meta name="twitter:description" content="יום שני | 18/05 | בית הכנסת לב חריש" />
-  <meta name="twitter:image" content="https://castroeid.github.io/harel/assets/preview.png" />
+  <meta name="twitter:image" content="https://castroeid.github.io/harel/assets/preview.webp" />
 
-  <!-- ביצועים -->
-  <link rel="preload" as="image" href="assets/invite-full.webp" />
+  <link rel="preload" as="image" href="assets/preview.webp" />
 
   <style>
     * { box-sizing: border-box; }
@@ -64,31 +56,38 @@
       background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,0) 45%);
     }
 
-    /* כפתור Waze מורם יותר למעלה */
-    .waze-btn {
+    .btn {
       position: absolute;
-      bottom: 90px; /* היה 30px – הרמנו */
       left: 50%;
       transform: translateX(-50%);
       width: 85%;
       height: 56px;
       border-radius: 999px;
-      background: linear-gradient(135deg, #0a3d68, #08223d);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: bold;
       text-decoration: none;
       border: 2px solid #c7a45a;
       box-shadow: 0 10px 20px rgba(0,0,0,.4);
     }
 
-    .waze-icon {
-      width: 34px;
-      height: 34px;
+    .waze-btn {
+      bottom: 110px;
+      background: linear-gradient(135deg, #0a3d68, #08223d);
+    }
+
+    .wa-btn {
+      bottom: 40px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: white;
       display: flex;
@@ -97,57 +96,32 @@
       color: #08223d;
       font-size: 1.2rem;
     }
-
-    /* טקסט אישור הגעה */
-    .rsvp {
-      position: absolute;
-      bottom: 30px;
-      width: 100%;
-      text-align: center;
-      color: #fff4d6;
-      font-size: 1.1rem;
-      font-weight: bold;
-      text-shadow: 0 2px 6px rgba(0,0,0,.6);
-    }
-
-    @media (max-width: 390px) {
-      .waze-btn {
-        height: 50px;
-        font-size: 1.05rem;
-        bottom: 80px;
-      }
-      .rsvp {
-        font-size: 1rem;
-        bottom: 22px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
   <div class="container">
-    <!-- תמונת ההזמנה -->
-    <img class="bg"
-         src="assets/invite-full.webp"
-         alt="הזמנה"
-         loading="eager"
-         fetchpriority="high" />
+    <img class="bg" src="assets/preview.webp" alt="הזמנה" />
 
-    <!-- הצללה -->
     <div class="overlay"></div>
 
-    <!-- כפתור ניווט Waze (קואורדינטות + ניווט) -->
-    <a class="waze-btn"
-       href="https://waze.com/ul?ll=32.47386,35.04692&navigate=yes"
-       target="_blank"
-       rel="noopener noreferrer">
+    <!-- ניווט Waze -->
+    <a class="btn waze-btn"
+       href="https://waze.com/ul?ll=32.47363,35.04670&navigate=yes"
+       target="_blank">
       <span>להגעה לחצו כאן</span>
-      <span class="waze-icon">🚗</span>
+      <span class="icon">🚗</span>
     </a>
 
-    <!-- אישור הגעה -->
-    <div class="rsvp">אנא אשרו הגעתכם.</div>
+    <!-- וואטסאפ אישור הגעה -->
+    <a class="btn wa-btn"
+       href="https://wa.me/972526211036?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%90%D7%A9%D7%A8%20%D7%94%D7%92%D7%A2%D7%94%20%D7%9C%D7%A2%D7%9C%D7%99%D7%99%D7%94%20%D7%9C%D7%AA%D7%95%D7%A8%D7%94%20%D7%A9%D7%9C%20%D7%94%D7%A8%D7%90%D7%9C"
+       target="_blank">
+      <span>אישור הגעה בוואטסאפ</span>
+      <span class="icon">💬</span>
+    </a>
+
   </div>
 
 </body>
