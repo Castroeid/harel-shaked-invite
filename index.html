@@ -7,20 +7,23 @@
   <title>עלייה לתורה להראל שקד</title>
 
   <!-- Share preview -->
- <!-- Share preview -->
-<meta property="og:title" content="עלייה לתורה להראל שקד" />
-<meta property="og:description" content="יום שני | 18/05 | בית הכנסת לב חריש" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://castroeid.github.io/harel/" />
-<meta property="og:image" content="https://castroeid.github.io/harel/assets/preview.webp" />
-<meta property="og:image:secure_url" content="https://castroeid.github.io/harel/assets/preview.webp" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+  <meta property="og:title" content="עלייה לתורה להראל שקד" />
+  <meta property="og:description" content="יום שני | 18/05 | בית הכנסת לב חריש" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://castroeid.github.io/harel/" />
+  <meta property="og:image" content="https://castroeid.github.io/harel/assets/preview.png" />
+  <meta property="og:image:secure_url" content="https://castroeid.github.io/harel/assets/preview.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://castroeid.github.io/harel/assets/preview.webp" />
-  <!-- ביצועים: טעינה מוקדמת של התמונה -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="עלייה לתורה להראל שקד" />
+  <meta name="twitter:description" content="יום שני | 18/05 | בית הכנסת לב חריש" />
+  <meta name="twitter:image" content="https://castroeid.github.io/harel/assets/preview.png" />
+
+  <!-- ביצועים -->
   <link rel="preload" as="image" href="assets/invite-full.webp" />
 
   <style>
@@ -58,12 +61,13 @@
     .overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0) 40%);
+      background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,0) 45%);
     }
 
+    /* כפתור Waze מורם יותר למעלה */
     .waze-btn {
       position: absolute;
-      bottom: 30px;
+      bottom: 90px; /* היה 30px – הרמנו */
       left: 50%;
       transform: translateX(-50%);
       width: 85%;
@@ -94,10 +98,27 @@
       font-size: 1.2rem;
     }
 
+    /* טקסט אישור הגעה */
+    .rsvp {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      text-align: center;
+      color: #fff4d6;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-shadow: 0 2px 6px rgba(0,0,0,.6);
+    }
+
     @media (max-width: 390px) {
       .waze-btn {
         height: 50px;
         font-size: 1.05rem;
+        bottom: 80px;
+      }
+      .rsvp {
+        font-size: 1rem;
+        bottom: 22px;
       }
     }
   </style>
@@ -116,14 +137,17 @@
     <!-- הצללה -->
     <div class="overlay"></div>
 
-    <!-- כפתור Waze -->
+    <!-- כפתור ניווט Waze (קואורדינטות + ניווט) -->
     <a class="waze-btn"
-       href="https://waze.com/ul/hsvbc0v75s"
+       href="https://waze.com/ul?ll=32.47386,35.04692&navigate=yes"
        target="_blank"
        rel="noopener noreferrer">
       <span>להגעה לחצו כאן</span>
       <span class="waze-icon">🚗</span>
     </a>
+
+    <!-- אישור הגעה -->
+    <div class="rsvp">אנא אשרו הגעתכם.</div>
   </div>
 
 </body>
