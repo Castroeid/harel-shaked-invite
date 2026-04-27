@@ -10,8 +10,11 @@
   <meta property="og:title" content="עלייה לתורה להראל שקד" />
   <meta property="og:description" content="יום שני | 18/05 | בית הכנסת לב חריש" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://castroeid.github.io/harel-shaked-invite/assets/preview.png" />
-  <meta property="og:url" content="https://castroeid.github.io/harel-shaked-invite/" />
+  <meta property="og:image" content="https://castroeid.github.io/harel/assets/preview.png" />
+  <meta property="og:url" content="https://castroeid.github.io/harel/" />
+
+  <!-- ביצועים: טעינה מוקדמת של התמונה -->
+  <link rel="preload" as="image" href="assets/invite-full.webp" />
 
   <style>
     * { box-sizing: border-box; }
@@ -96,14 +99,21 @@
 <body>
 
   <div class="container">
-    <!-- התמונה שלך -->
-    <img class="bg" src="assets/invite-full.webp" alt="הזמנה" />
+    <!-- תמונת ההזמנה -->
+    <img class="bg"
+         src="assets/invite-full.webp"
+         alt="הזמנה"
+         loading="eager"
+         fetchpriority="high" />
 
-    <!-- הצללה עדינה -->
+    <!-- הצללה -->
     <div class="overlay"></div>
 
     <!-- כפתור Waze -->
-    <a class="waze-btn" href="https://waze.com/ul/hsvbc0v75s" target="_blank">
+    <a class="waze-btn"
+       href="https://waze.com/ul/hsvbc0v75s"
+       target="_blank"
+       rel="noopener noreferrer">
       <span>להגעה לחצו כאן</span>
       <span class="waze-icon">🚗</span>
     </a>
